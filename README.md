@@ -1,29 +1,27 @@
-# SmartTodo
+Podfile
 
-## Ideen 
-- Umsetzung der API durch Headless CMS
-- Standortgebundenes Anzeigen von Informationen (Benachrichtigung)
-- Aktivitäten bestehen aus
-  - Titel
-  - GPS Standort
-  - Beschreibung (optional)
-  - Datum / Uhrzeit (Erstellungsdatum,Benachrichtigungszeit...)(optional) 
-  - Bilder (optional)
-  - Geogrfischer Standort (beispielsweise Stadion)(optional)
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
 
-## Features
-- [ ] Statischer Prototyp (bis 18.03.2019)
-- [ ] Persistenz (bis 25.03.2019)
-- [ ] HTTP (Termin folgt)
-- [ ] Camera (Termin folgt)
-- [ ] GPS (Termin folgt)
+target 'bk_s4_35_todo_v2' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
 
-## Themen des Projektes
-- [Persistenz]()
-- [HTTP Networking]()
-- [Camera]()
-- [GPS]()
+  # Pods for bk_s4_35_todo_v2
+	pod 'FBSDKLoginKit'
+	pod 'Firebase/Core'
+	pod 'Firebase/Auth'
+	pod 'Firebase/Database'
+	pod 'Firebase/Messaging'
+	pod 'Firebase/Storage'
+  target 'bk_s4_35_todo_v2Tests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
 
+  target 'bk_s4_35_todo_v2UITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
 
-## Spannende Links & Rssourcen
-- folgt
+end
